@@ -1,0 +1,33 @@
+result of cpu1.py
+
+
+(venv) nahid@nahid-ubunto:~/system-resource-viewer/venv$  cd /home/nahid/system-resource-viewer/venv ; /usr/bin/env /home/nahid/system-resource-viewer/venv/bin/python /home/nahid/.vscode-oss/extensions/ms-python.python-2023.8.0-universal/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher 57141 -- /home/nahid/system-resource-viewer/venv/cpu1.py 
+CPU Usage: 0.0%
+Memory Usage: 54.0%
+Disk Usage: 8.9%
+Network Usage: 2971145745 bytes
+CPU Usage: 15.1%
+Memory Usage: 54.0%
+Disk Usage: 8.9%
+Network Usage: 2971147007 bytes
+CPU Usage: 8.0%
+Memory Usage: 54.0%
+Disk Usage: 8.9%
+Network Usage: 2971147531 bytes
+CPU Usage: 3.6%
+Memory Usage: 53.6%
+Disk Usage: 8.9%
+Network Usage: 2971148521 bytes
+CPU Usage: 2.9%
+Memory Usage: 53.6%
+Disk Usage: 8.9%
+Network Usage: 2971149527 bytes
+CPU Usage: 12.0%
+Memory Usage: 53.8%
+Disk Usage: 8.9%
+Network Usage: 2971150201 bytes
+CPU Usage: 9.3%
+Memory Usage: 53.9%
+Disk Usage: 8.9%
+Network Usage: 2971151175 bytes
+(venv) nahid@nahid-ubunto:~/system-resource-viewer/venv$ 

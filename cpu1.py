@@ -1,24 +1,13 @@
 import psutil
-import time
+import csv
 
-while True:
-    # Get current CPU usage
-    cpu_usage = psutil.cpu_percent()
+with open('system-resources-cpu.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    # Write the header row
+    writer.writerow(['system-resources (%)'])
 
-    # Get current memory usage
-    memory_usage = psutil.virtual_memory().percent
-
-    # Get current disk usage
-    disk_usage = psutil.disk_usage('/').percent
-
-    # Get current network usage
-    network_usage = psutil.net_io_counters().bytes_sent + psutil.net_io_counters().bytes_recv
-
-    # Print the results
-    print(f"CPU Usage: {cpu_usage}%")
-    print(f"Memory Usage: {memory_usage}%")
-    print(f"Disk Usage: {disk_usage}%")
-    print(f"Network Usage: {network_usage} bytes")
-
-    # Wait for 5 seconds before getting the next set of data
-    time.sleep(2)
+    psutil.cpu_percent(interval=1)
+    per_cpu = psutil.cpu_percent(percpu=True)
+    # For individual core usage with blocking, psutil.cpu_percent(interval=1, percpu=True)
+    for idx, usage in enumerate(per_cpu):
+        writer.writerow([f"CORE_{idx+1}: {usage}%"])
